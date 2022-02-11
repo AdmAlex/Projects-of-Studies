@@ -1,0 +1,35 @@
+<a-assets>
+  <a-asset-item id="object" src="media/3D-Models/whale/10054_Whale_v2_L3.obj"></a-asset-item>
+  <a-asset-item id="material" src="media/3D-Models/whale/10054_Whale_v2_L3.mtl"></a-asset-item>
+  <a-asset-item id="whale-skeleton" src="media/3D-Models/whale-skeleton/scene.gltf"></a-asset-item>
+  <img id="skeleton-wall-image1" src="media/2D-MNU_20201112/skeleton2.jpg">
+  <img id="skeleton-wall-image2" src="media/2D-MNU_20201112/skeleton1.jpg">
+  <img id="whale-box-top-image" src="media/Museum2D/whale-box.png/">
+  <img id="whale-box-texture" src="media/Museum2D/wood-texture.jpg">
+  <img id="whale-fossil-image" src="media/Museum2D/whale-fossil.jpg">
+</a-assets>
+<!-- Höhe 3,50m; Startposition: -4, -15-->
+
+<a-entity id="whale" scale="0.005 0.005 0.005" position="-7 3 -25" rotation="-90 90 0" obj-model="obj: #object; mtl: #material" cursor-listener></a-entity>
+
+<a-cylinder id="whale-holder-front" color="#AAAAAA" position="-7 4 -24" height="1" radius="0.02"></a-cylinder>
+<a-cylinder id="whale-holder-back" color="#AAAAAA" position="-7 3.5 -26.2" height="1" radius="0.02"></a-cylinder>
+
+<a-entity id="whale-skeleton" gltf-model="#whale-skeleton" position="-1.3 2.6 -12" rotation="0 13 0" scale="0.13 0.13 0.13"></a-entity>
+
+<a-box id="whale-box" position="-7 0.6 -25" height="1.2" width="2" depth="3" material="src: #whale-box-texture"></a-box>
+<a-plane id="whale-box-top" position="-7 1.21 -25" height="2.6" width="1.6" rotation="-90 0 0" material="src: #whale-box-top-image"></a-plane>
+
+<a-box id="whale-fossil-box" position="-3.73 1 -25.5" rotation="0 -90 0" height="2" width="4" depth="0.3" color="#AAAAAA"></a-box>
+<a-plane id="whale-fossil-box-front" position="-3.89 1 -25.5" rotation="0 -90 0" height="2" width="4" material="src: #whale-fossil-image"></a-plane>
+
+<a-cylinder id="skeleton-holder-front" color="#AAAAAA" position="-1.3 3.6 -12" height="1.5" radius="0.02"></a-cylinder>
+<a-cylinder id="skeleton-holder-back" color="#AAAAAA" position="-1.78 3.75 -14" height="0.5" radius="0.02"></a-cylinder>
+
+<a-box id="skeleton-wall1" position="-0.01 2 -10.68" rotation="0 0 0" width="0.33" height="4" depth="2.28" color="#AAAAAA"></a-box>
+<a-box id="skeleton-wall2" position="-0.7 2 -13.65" rotation="0 20 0" width="0.33" height="4" depth="4" color="#AAAAAA"></a-box>
+<a-box id="skeleton-wall3" position="-0.995 2 -16.49" rotation="0 -20 0" width="0.33" height="4" depth="2.28" color="#AAAAAA"></a-box>
+<a-box id="skeleton-wall4" position="0.4 2 -17.45" rotation="0 90 0" width="0.33" height="4" depth="2.28" color="#AAAAAA"></a-box>
+
+<a-plane id="skeleton-wall2-image" position="-0.87 2 -13.62" rotation="0 -70 0" width="4" height="2" material="src: #skeleton-wall-image2"></a-plane>
+<a-plane id="skeleton-wall1-image" position="-0.18 2 -10.68" rotation="0 -90 0" width="2.28" height="2" material="src: #skeleton-wall-image1"></a-plane>

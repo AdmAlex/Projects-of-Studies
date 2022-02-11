@@ -1,0 +1,40 @@
+<a-assets>
+    <img id="back-wall-image" src="media/2D-MNU_20201112/DSC00951.JPG">
+    <img id="left-wall-image" src="media/Museum2D/DSC00956-leftwall.jpg">
+    <img id="left-wall-back-image" src="media/2D-MNU_20201112/DSC00857new.jpg">
+    <img id="right-wall-image" src="media/Museum2D/DSC00951-rightwall.jpg">
+    <img id="table-top" src="media/Museum2D/DSC00576.JPG">
+    <img id="newspaper-image" src="media/newspaper/Zeitungsartikel-1.png">
+    <a-asset-item id="table-model" src="media/3D-Models/excavation-table/scene.gltf"></a-asset-item>
+    <a-asset-item id="chair-model" src="media/3D-Models/excavation-chair/scene.gltf"></a-asset-item>
+    <a-asset-item id="left-stone-model" src="media/3D-Models/excavation-stone-left/scene.gltf"></a-asset-item>
+    <a-asset-item id="back-stone-model" src="media/3D-Models/excavation-stone-back/scene.gltf"></a-asset-item>
+    <a-asset-item id="right-stone-model" src="media/3D-Models/excavation-stone-right/scene.gltf"></a-asset-item>
+    <a-asset-item id="cup-model" src="media/3D-Models/excavation-cup/scene.gltf"></a-asset-item>
+    <a-asset-item id="notebook-model" src="media/3D-Models/excavation-notebook/scene.gltf"></a-asset-item>
+    <a-asset-item id="magazine-model" src="media/3D-Models/excavation-magazine/scene.gltf"></a-asset-item>
+    <a-asset-item id="magnifyingglass-model" src="media/3D-Models/excavation-magnifyingglass/scene.gltf"></a-asset-item>
+</a-assets>
+<!-- Höhe 3,50m; Startposition: -4, -15-->
+<a-box id="back-wall" position="-5 1.75 -15" rotation="0 90 0" width="4.6" height="3.5" depth="0.1" material="src: #back-wall-image"></a-box>
+<a-box id="left-wall" position="-5.8125 1.75 -17.3" width="1.5" height="3.5" depth="0.1" material="src: #left-wall-image"></a-box>
+<a-box id="right-wall" position="-5.8125 1.75 -12.7" width="1.5" height="3.5" depth="0.1" material="src: #right-wall-image"></a-box>
+<a-plane id="back-wall-backside" position="-4.9 1.75 -15" rotation="0 90 0" width="4.8" height="3.5" color="#AAAAAA"></a-plane>
+<a-plane id="left-wall-backside" position="-5.74 1.75 -17.36" rotation="0 180 0" width="1.69" height="3.5" material="src: #left-wall-back-image"></a-plane>
+<a-plane id="right-wall-backside" position="-5.75 1.75 -12.64" width="1.69" height="3.5" color="#AAAAAA"></a-plane>
+<a-entity id="table" gltf-model="#table-model" position="-6.4 0.2 -15.5" scale="0.013 0.013 0.013"></a-entity>
+<a-entity id="chair1" gltf-model="#chair-model" position="-6.4 0 -14.7" scale="1.3 1.3 1.3"></a-entity>
+<a-entity id="chair2" gltf-model="#chair-model" rotation="0 90 0" position="-7.1 0 -15.5" scale="1.3 1.3 1.3"></a-entity>
+<a-entity id="left-stone" gltf-model="#left-stone-model" rotation="0 -90 0" position="-5.8 0.3 -16.98" scale="0.18 0.18 0.18"></a-entity>
+<a-entity id="back-stone" gltf-model="#back-stone-model" position="-5.4 0.3 -15" scale="0.22 0.22 0.22"></a-entity>
+<a-entity id="right-stone" gltf-model="#right-stone-model" rotation="0 90 0" position="-5.8 0.3 -13.4" scale="0.25 0.25 0.25"></a-entity>
+<a-entity id="cup" gltf-model="#cup-model" rotation=" 0 30 0" position="-6.3 1.2 -15.6" scale="0.001 0.001 0.001"></a-entity>
+<a-entity id="notebook" gltf-model="#notebook-model" rotation="0 10 90" position="-6.15 1.2 -15.8" scale="0.2 0.16 0.2"></a-entity>
+<a-entity id="magazine" gltf-model="#magazine-model" rotation=" 0 70 0" position="-6.2 1.2 -15.3" scale="0.02 0.02 0.02"></a-entity>
+<a-entity id="magnifyingglass1" gltf-model="#magnifyingglass-model" position="-6.5 1.2 -15.25" scale="0.025 0.025 0.025"></a-entity>
+<a-entity id="magnifyingglass2" gltf-model="#magnifyingglass-model" position="-6.6 1.2 -15.35" scale="0.025 0.025 0.025"></a-entity>
+<a-entity id="magnifyingglass3" gltf-model="#magnifyingglass-model" position="-6.6 1.2 -15.15" scale="0.025 0.025 0.025"></a-entity>
+<a-entity id="magnifyingglass4" gltf-model="#magnifyingglass-model" position="-6.75 1.2 -15.35" scale="0.025 0.025 0.025"></a-entity>
+<a-entity id="magnifyingglass5" gltf-model="#magnifyingglass-model" position="-6.7 1.2 -15.2" scale="0.025 0.025 0.025"></a-entity>
+<a-box id="newspaper" position="-6.65 1.16 -15.75"  width="0.45" height="0.35" rotation="90 95 0" depth="0.001" material="src: #newspaper-image" cursor-listener></a-box>
+<a-plane id="newspaper-popup" visible="false" position="-6.5 2 -15.75" width="1" height="0.75" rotation="0 -90 0" material="src: #newspaper-image"></a-plane>
