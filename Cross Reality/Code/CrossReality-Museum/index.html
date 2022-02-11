@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <img id="carpet-texture" src="media/Museum2D/carpet-Texture.jpg">
+</head>
+<body>
+<script src="js/events.js"></script>
+<a-scene check-interaction>
+    <a-plane id="floor" position="-4.3 0 -15" rotation="-90 0 0" width="12,87" height="30,86" material="src: #carpet-texture"></a-plane>
+    <a-plane id="ceiling" position="-4.3 4 -15" rotation="90 0 0" width="12,87" height="30,86" color="#222222"></a-plane>
+    <a-box position="1.49 2 -15" width="0.42" height="4" depth="30,86" color="#AAAAAA"></a-box>
+    <a-box position="-7.3 2 -0.165" rotation="0 90 0" width="0.33" height="4" depth="6,68" color="#AAAAAA"></a-box>
+    <a-box position="-10.09 2 -15" width="0.42" height="4" depth="30,86" color="#AAAAAA"></a-box>
+    <a-box position="-3.8 2 -28.725" width="0.17" height="4" depth="2.55" color="#AAAAAA"></a-box>
+    <a-box position="-3.685 2 -27.535" rotation="0 90 0" width="0.17" height="4" depth="0.4" color="#AAAAAA"></a-box>
+    <a-box position="-3 2 -27.535" rotation="0 90 0" width="0.05" height="4" depth="1,49" color="#5b3a29"></a-box>
+    <a-box position="-2.06 2 -27.535" rotation="0 90 0" width="0.17" height="4" depth="0.88" color="#AAAAAA"></a-box>
+    <a-box position="-1.705 2 -24.62" width="0.17" height="4" depth="6,84" color="#AAAAAA"></a-box>
+    <a-box position="-1.29 2 -21.705" rotation="0 90 0" width="0.17" height="4" depth="1,93" color="#AAAAAA"></a-box>
+    <a-box position="-0.8735 2 -21.12" width="0.17" height="4" depth="1.87" color="#AAAAAA"></a-box>
+    <a-box position="0.3 2 -20.27" rotation="0 90 0" width="0.17" height="4" depth="2.4" color="#AAAAAA"></a-box>
+    <a-sky color="#ECECEC"></a-sky>
+    <!-- Das lädt eine andere html-Datei in diese Datei rein; kopieren, Pfad anpassen -->
+    <div w3-include-html="html/excavation.html"></div>
+    <div w3-include-html="html/europe.html"></div>
+    <div w3-include-html="html/whale.html"></div>
+    <div w3-include-html="html/bigWall.html"></div>
+    <div w3-include-html="html/sidewalls.html"></div>
+    <div w3-include-html="html/leftwall.html"></div>
+    <div w3-include-html="html/ziczac.html"></div>s
+    <div w3-include-html="html/rightexcavation.html"></div>
+    <!-- Changed default camera -->
+    <a-entity camera="active: true" id="camera" look-controls wasd-controls="acceleration:400" position="0 2 0" position-reader>
+        <a-entity cursor="fuse: true; fuseTimeout: 500"
+                  rayOrigin="mouse"
+                  position="0 0 -0.5"
+                  geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01"
+                  material="color: #6580ad; shader: flat">
+        </a-entity>
+    </a-entity>
+</a-scene>
+
+<!-- Diese zwei Zeilen müssen am Ende der Datei stehen bleiben, bitte nicht verschieben -->
+<script src="js/include.js"></script>
+<script>includeHTML()</script>
+
+</body>
+</html>
